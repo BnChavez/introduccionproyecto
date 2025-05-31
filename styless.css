@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column; /* Apila todos los elementos directos del header verticalmente */
+    align-items: center; /* Centra los elementos (titulo-busqueda, menu) horizontalmente */
+    background-color: #20B2AA; /* Color de fondo del encabezado */
+    padding: 15px 20px;
+    color: white; /* Color de texto para el título */
+}
+
+.contenedor-logo-busqueda {
+    display: flex;
+    align-items: center; /* Alinea verticalmente logo y buscador */
+    justify-content: center; /* Centra horizontalmente dentro de .titulo-busqueda */
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 10px; /* Separación entre el conjunto y el h1 */
+}
+
+.logo {
+  width: 130px; /* Ajusta el tamaño del logo para que no sea tan grande */
+  height: auto;
+}
+
+
+.titulo-busqueda {
+    display: flex; /* Habilita Flexbox para los elementos dentro de este div */
+    flex-direction: column; /* Apila el h1 y el .buscador verticalmente */
+    align-items: center; /* Centra el h1 y el .buscador horizontalmente */
+    width: 100%; /* Ocupa el ancho completo dentro del .encabezado */
+    max-width: 500px; /* Limita el ancho total de esta sección para centrarla mejor */
+    margin-bottom: 20px; /* Espacio entre el buscador y el menú */
+}
+
+.titulo-principal {
+    margin: 0 0 10px 0; /* Margen inferior para separar del buscador */
+    font-size: 2.8em; /* Tamaño de fuente del título "Supermercado" */
+    text-align: center; /* Centra el texto del título */
+    width: 100%; /* Asegura que el h1 ocupe el ancho completo dentro de .titulo-busqueda */
+}
+
+.buscador {
+    display: flex; /* Mantiene el input y el botón en línea */
+    align-items: center; /* Centra verticalmente el input y el botón */
+    justify-content: center; /* Centra el input y el botón dentro de .buscador */
+    width: 100%; /* Ocupa el ancho completo dentro de .titulo-busqueda */
+    max-width: 350px; /* Limita el ancho del buscador */
+}
+
+.campo-busqueda {
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    flex-grow: 1; /* Permite que el campo de texto ocupe el espacio disponible */
+}
+
+.boton-busqueda {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-busqueda:hover {
+    background-color: #0056b3;
+}
+
+.menu {
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra los enlaces */
+    background-color: #5DBCD2; /* Color de fondo del menú */
+    padding: 10px 0; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    display: flex; /* Para alinear los enlaces del menú horizontalmente */
+    justify-content: center;
+    gap: 20px; /* Espacio entre los enlaces */
+    margin-top: 20px; /* Espacio entre el buscador y el menú */
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.menu a:hover {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.contenido {
+    width: 90%;
+    max-width: 1200px; 
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    border-radius: 8px;
+}
+
+.seccion-productos h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 1.8em;
+}
+
+.contenedor-productos {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px; 
+}
+
+.tarjeta-producto {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px); 
+}
+
+.imagen-producto {
+    max-width: 100%;
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-producto h3 {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.precio {
+    font-size: 1.2em;
+    color: #e67e22; 
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.precio-anterior {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+.boton-chico {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.boton-chico:hover {
+    background-color: #0056b3;
+}
+.pie-pagina {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; 
+    color: white;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr; 
+    }
+}
